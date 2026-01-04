@@ -16,7 +16,11 @@ pip install torchcodec
 MODEL DOWNLOAD
 --------------
 
-Requires Hugging Face authentication:
+Use the included download script (recommended):
+
+python3 download_model.py
+
+Or manually with huggingface-cli:
 
 huggingface-cli login
 huggingface-cli download fishaudio/openaudio-s1-mini \
@@ -24,6 +28,9 @@ huggingface-cli download fishaudio/openaudio-s1-mini \
   --local-dir-use-symlinks False
 
 Model size: ~3.3GB (1.6GB model.pth + 1.7GB codec.pth)
+
+Note: Models are NOT included in git repository due to size.
+      You must download them separately before using Fish Speech.
 
 API USAGE
 ---------
